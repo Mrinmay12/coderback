@@ -16,7 +16,9 @@ app.use((req, res, next) => {
     next();
   });
 
-
+  app.get("/",(req,res)=>{
+    res.send("Welcome to coder server")
+})
 app.use("/code/api",AdminRoutes)
 
 const start =async()=>{
